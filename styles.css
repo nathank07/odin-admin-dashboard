@@ -1,10 +1,15 @@
+:root{
+    --h1size: 1.8rem;
+    --h2size: 1.17rem;
+    --h3size: 1.17rem;
+}
+
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr 6fr;
     height: 1fr;
     margin: 0;
 }
@@ -15,6 +20,8 @@ body{
     color:white;
 }
 .content{
+    display: grid;
+    grid-template-rows: 1fr 6fr;
     background-color: antiquewhite;
 }
 .button img{
@@ -41,17 +48,19 @@ body{
 .button{
     display:flex;
     align-items: center;
+    margin-right: 1.5rem;
 }
 .button h2{
     margin: 0;
     padding: 0;
 }
 .button span{
-    font-size: 1.5em;
+    font-size: calc(var(--h2size) + 0.5rem);
     margin: 1rem;
+    margin-left: 1.5rem;
 }
 .button.top span{
-    font-size: 2em;
+    font-size: calc(var(--h1size) + 0.5rem);
 }
 .workspace{
     display: grid;
@@ -101,4 +110,10 @@ body{
 }
 a{
     text-decoration: none;
+}
+h1{
+    font-size: var(--h1size);
+}
+h2{
+    font-size: var(--h2size);
 }
