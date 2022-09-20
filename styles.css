@@ -1,0 +1,79 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 6fr;
+    margin: 0;
+}
+.dashboard{
+    background-color: aqua;
+}
+.content{
+    background-color: antiquewhite;
+}
+.button img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+.left, .container{
+    display: flex;
+    align-items: center;
+}
+.pfp{
+    background-color: azure;
+    border-radius: 360px;
+    aspect-ratio: 1/1;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.button{
+    display:flex;
+}
+.workspace{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: gray;
+}
+.projectcards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap:10px;
+}
+.card{
+    background-color: white;
+}
+.profile{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: white;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.stack{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.rightrow{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.boxes{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.box{
+    background-color: white;
+}
+.projects, .announcements, .trending{
+    display: flex;
+    flex-direction: column;
+}
+.projects > *:last-child, .announcements > *:last-child, .trending > *:last-child{
+    flex: 1;
+}
