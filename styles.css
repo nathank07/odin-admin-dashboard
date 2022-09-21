@@ -123,10 +123,37 @@ input{
 }
 .card{
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--foreground-color);
     height: 10rem;
+    padding: calc(var(--gap) * 2);
+    border-radius: 0px 10px 10px 0px;
+    overflow: scroll;
+    scrollbar-width: thin;
+}
+.options{
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: var(--gap);
+    gap: calc(var(--gap) / 2);
+}
+.card h2{
+    margin-top: 0;
+}
+.fullcard{
+    display: flex;
+    position: relative;
+}
+.decoration-line{
+    background-color: var(--theme-color);
+    border-radius: 10px 0px 0px 10px;
+    height:100%;
+    width: 0.5rem;
 }
 .profile{
     display:grid;
@@ -164,9 +191,13 @@ h2{
     font-size: var(--h2size);
 }
 .transparent{
-    background-color: transparent;
+    background-color: var(--background-color);
     border: transparent;
+    border-radius: 10px;
 }
 .transparent:hover{
     cursor: pointer;
+}
+p{
+    word-wrap: break-word;
 }
