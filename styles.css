@@ -5,7 +5,9 @@
     --gap: 16px;
     --foreground-color: #262323;
     --background-color: #171515;
-    --theme-color: #5E0003
+    --subtitle-color: #f2b8b8;
+    --theme-color: #5E0003;
+    --small-text: 0.8rem;
 }
 
 *{
@@ -157,10 +159,26 @@ input{
 }
 .profile{
     display:grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 5fr 1fr;
     background-color: var(--foreground-color);
-    padding: 16px;
+    padding: calc(var(--gap)*2);
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+.profile .pfp{
+    margin-right: calc(var(--gap)*2);
+}
+.profile .transparent span{
+    font-size: 1.5rem;
+    color: var(--subtitle-color);
+}
+.profile .transparent{
+    width: 5rem;
+    height: 5rem;
+}
+.profile .desc{
+    font-size: 1rem;
 }
 .stack{
     display: flex;
@@ -169,10 +187,21 @@ input{
 }
 .boxes{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
 }
 .box{
     background-color: var(--foreground-color);
+    padding: calc(var(--gap)*2);
+    padding-bottom: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+.boxes > :first-child{
+    border-radius: 10px 10px 0 0;
+    padding-top: calc(var(--gap) / 2);
+}
+.boxes > :last-child{
+    border-radius: 0 0 10px 10px;
+    padding-bottom: calc(var(--gap) / 2);
 }
 .projects, .announcements, .trending{
     display: flex;
@@ -181,7 +210,7 @@ input{
 .projects > *:last-child, .announcements > *:last-child, .trending > *:last-child{
     flex: initial;
 }
-a{
+.dashboard a{
     text-decoration: none;
 }
 h1{
@@ -190,8 +219,11 @@ h1{
 h2{
     font-size: var(--h2size);
 }
-.transparent{
+.options .transparent{
     background-color: var(--background-color);
+}
+.transparent{
+    background-color: transparent;
     border: transparent;
     border-radius: 10px;
 }
@@ -200,4 +232,20 @@ h2{
 }
 p{
     word-wrap: break-word;
+}
+.boxes p{
+    font-size: var(--small-text);
+}
+p, .desc{
+    color: var(--subtitle-color);
+}
+.line{
+    color: var(--background-color);
+    width: 100%;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+    height: 2px;
+}
+a{
+    color:var(--subtitle-color);
 }
