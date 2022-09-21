@@ -157,11 +157,17 @@ input{
     height:100%;
     width: 0.5rem;
 }
+.profiles > :first-child{
+    border-radius: 10px 10px 0 0;
+}
+.profiles > :last-child{
+    border-radius: 0 0 10px 10px;
+}
 .profile{
     display:grid;
     grid-template-columns: 1fr 5fr 1fr;
     background-color: var(--foreground-color);
-    padding: calc(var(--gap)*2);
+    padding: calc(var(--gap));
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
@@ -172,10 +178,6 @@ input{
 .profile .transparent span{
     font-size: 1.5rem;
     color: var(--subtitle-color);
-}
-.profile .transparent{
-    width: 5rem;
-    height: 5rem;
 }
 .profile .desc{
     font-size: 1rem;
